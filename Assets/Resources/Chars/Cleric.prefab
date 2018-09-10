@@ -747,7 +747,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -826,7 +826,7 @@ MonoBehaviour:
   skillName: Heal
   range: 3.4028235e+38
   preparing: 0
-  healAmount: 20
+  healAmount: 35
 --- !u!114 &114164006418430404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1122,9 +1122,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackType: 0
-  damage: 3
+  damage: 5
   maxDistance: 8
-  debounceTime: 0.7
+  debounceTime: 0.6
   attackPrefab: {fileID: 1640609073072588, guid: 404646322dcc9784eb05ef6fb3c5dec6,
     type: 2}
   basicAttackPoint: {fileID: 4955693754817150}
@@ -1260,7 +1260,7 @@ MonoBehaviour:
   controlUI: 1
   key: W
   icon: {fileID: 21300000, guid: 12ee3d0a0a0513744ad534253d322cdb, type: 3}
-  cooldownSeconds: 7
+  cooldownSeconds: 5
   skillName: Purification
   range: 3.4028235e+38
   preparing: 0

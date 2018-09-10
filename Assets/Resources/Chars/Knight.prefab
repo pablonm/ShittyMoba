@@ -747,7 +747,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1003,7 +1003,7 @@ MonoBehaviour:
   skillName: Parry
   range: 3.4028235e+38
   preparing: 0
-  parryHits: 3
+  parryHits: 1
   seconds: 5
 --- !u!114 &114374909343857042
 MonoBehaviour:

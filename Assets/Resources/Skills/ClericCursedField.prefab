@@ -108,6 +108,8 @@ MonoBehaviour:
   seconds: 5
   slowSeconds: 2
   slowMultiplier: 0.5
+  poisonDamage: 5
+  poisonSeconds: 3
 --- !u!198 &198874319235306936
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -168,7 +170,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1822411167
+  randomSeed: 1829233458
   InitialModule:
     serializedVersion: 3
     enabled: 1

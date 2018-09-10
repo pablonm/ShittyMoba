@@ -7,6 +7,8 @@ public class CursedField : Photon.PunBehaviour
     public float seconds = 5;
     public float slowSeconds = 1;
     public float slowMultiplier = 0.3f;
+    public float poisonDamage = 5f;
+    public float poisonSeconds = 3f;
 
     private BoxCollider2D coll;
 
@@ -21,6 +23,7 @@ public class CursedField : Photon.PunBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Character") && collision.gameObject.CompareTag("Enemy") && photonView.isMine)
         {
             collision.gameObject.GetComponent<StatusController>().ApplySlow(slowMultiplier, slowSeconds);
+            collision.gameObject.GetComponent<StatusController>().ApplyPoison(poisonDamage, poisonSeconds);
         }
     }
 
