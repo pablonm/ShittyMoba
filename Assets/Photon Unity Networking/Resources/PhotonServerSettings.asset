@@ -17,7 +17,7 @@ MonoBehaviour:
   HostType: 1
   PreferredRegion: 7
   EnabledRegions: -1
-  Protocol: 4
+  Protocol: 5
   ServerAddress: 
   ServerPort: 5055
   VoiceServerPort: 5055
