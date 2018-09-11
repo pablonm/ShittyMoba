@@ -11,6 +11,7 @@ public class MenuManager : Photon.PunBehaviour
     [HideInInspector]
     public GameObject mySlot;
     private string playerName;
+    private string roomName;
 
     private void Start()
     {
@@ -21,9 +22,10 @@ public class MenuManager : Photon.PunBehaviour
         }
     }
 
-    public void Connect(string name)
+    public void Connect(string name, string room)
     {
         playerName = name;
+        roomName = room;
         PhotonNetwork.automaticallySyncScene = true;
         PhotonNetwork.ConnectUsingSettings("ShittyMoba");
     }
@@ -35,7 +37,7 @@ public class MenuManager : Photon.PunBehaviour
             IsVisible = true,
             MaxPlayers = 12
         };
-        PhotonNetwork.JoinOrCreateRoom("ShittyMobaRoom", roomOptions, TypedLobby.Default);
+        PhotonNetwork.JoinOrCreateRoom(roomName, roomOptions, TypedLobby.Default);
     }
 
     public override void OnJoinedRoom()
@@ -50,6 +52,11 @@ public class MenuManager : Photon.PunBehaviour
     public void StartGame()
     {
         PhotonNetwork.LoadLevel("Game");
+    }
+
+    public void OnApplicationQuit()
+    {
+        PhotonNetwork.Disconnect();
     }
 
     private void Update()

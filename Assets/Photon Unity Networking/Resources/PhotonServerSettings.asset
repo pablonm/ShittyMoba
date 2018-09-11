@@ -17,7 +17,7 @@ MonoBehaviour:
   HostType: 1
   PreferredRegion: 7
   EnabledRegions: -1
-  Protocol: 0
+  Protocol: 4
   ServerAddress: 
   ServerPort: 5055
   VoiceServerPort: 5055
@@ -73,4 +73,5 @@ MonoBehaviour:
   - SetTriggerRPC
   - PlaySoundRPC
   - StopRPC
+  - SetBoolRPC
   DisableAutoOpenWizard: 1

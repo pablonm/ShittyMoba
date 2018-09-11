@@ -57,4 +57,9 @@ public class GameManager : Photon.PunBehaviour
         localPlayer.transform.position = ((string)PhotonNetwork.player.CustomProperties["team"] == "blue") ? blueSpawn.transform.position : redSpawn.transform.position;
     }
 
+    public void OnApplicationQuit()
+    {
+        PhotonNetwork.Disconnect();
+    }
+
 }
