@@ -60,7 +60,7 @@ public class HealthController : Photon.PunBehaviour
         {
             currentHealth = 0;
         }
-        if (currentHealth == 0)
+        if (currentHealth == 0 && isAlive)
         {
             Die();
         }
@@ -83,8 +83,8 @@ public class HealthController : Photon.PunBehaviour
 
     private void Die()
     {
-        statusController.CleanAll();
         isAlive = false;
+        statusController.CleanAll();
         syncAnimator.SetTrigger("death");
         skillController.enabled = false;
         basicAttackController.CancelAttack();
@@ -105,14 +105,16 @@ public class HealthController : Photon.PunBehaviour
     public void ReviveRPC()
     {
         isAlive = true;
-        syncAnimator.SetTrigger("stop");
+        syncAnimator.SetTrigger("idle");
+        statusController.CleanAll();
         currentHealth = totalHealth;
         skillController.enabled = true;
         basicAttackController.enabled = true;
         coll.enabled = true;
     }
 
-    void Update () {
+    void Update ()
+    {
         healthBar.fillAmount = currentHealth / totalHealth;
 	}
 }

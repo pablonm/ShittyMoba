@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SyncAnimator : Photon.PunBehaviour
 {
-    private Animator anim;
+    public Animator anim;
 
 	private void Start ()
     {
@@ -22,6 +22,20 @@ public class SyncAnimator : Photon.PunBehaviour
         if (anim)
         {
             anim.SetTrigger(trigger);
+        }
+    }
+
+    public void SetBool(string boolean, bool value)
+    {
+        photonView.RPC("SetBoolRPC", PhotonTargets.All, boolean, value);
+    }
+
+    [PunRPC]
+    public void SetBoolRPC(string boolean, bool value)
+    {
+        if (anim)
+        {
+            anim.SetBool(boolean, value);
         }
     }
 

@@ -45,7 +45,7 @@ public class NavChar : MonoBehaviour
     {
         caminoMinimoPuntos = new Stack<Vector3>();
         caminar = false;
-        syncAnimator.SetTrigger("stop");
+        syncAnimator.SetBool("walk", caminar);
     }
 
     public void irHaciaClick(UnityAction cb = null)
@@ -118,8 +118,8 @@ public class NavChar : MonoBehaviour
             }
             if (!caminar)
             {
-                syncAnimator.SetTrigger("walk");
                 caminar = true;
+                syncAnimator.SetBool("walk", caminar);
             }
         }
     }
@@ -164,7 +164,7 @@ public class NavChar : MonoBehaviour
                     callback = null;
                 }
                 caminar = false;
-                syncAnimator.SetTrigger("stop");
+                syncAnimator.SetBool("walk", caminar);
             }
         }
     }

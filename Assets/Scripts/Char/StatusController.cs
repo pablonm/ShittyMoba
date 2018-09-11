@@ -133,6 +133,7 @@ public class StatusController : Photon.PunBehaviour {
     public void ApplyStunRPC(float time)
     {
         sfx.PlaySoundRPC("stun", true);
+        syncAnimator.SetTrigger("idle");
         CleanFreeze();
         stun = true;
         stunEffect.SetActive(true);
@@ -214,7 +215,7 @@ public class StatusController : Photon.PunBehaviour {
     {
         sfx.PlaySoundRPC("trap", false);
         trap = true;
-        syncAnimator.SetTrigger("stop");
+        syncAnimator.SetTrigger("idle");
         if (navChar.enabled)
         {
             navChar.cancelarMovimiento();
