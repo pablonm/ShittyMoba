@@ -887,7 +887,7 @@ MonoBehaviour:
   controlUI: 1
   key: E
   icon: {fileID: 21300000, guid: a0b23820da181bc4e879d7b9c8c8ca88, type: 3}
-  cooldownSeconds: 7
+  cooldownSeconds: 8
   skillName: Wall
   range: 3.4028235e+38
   preparing: 0
@@ -971,6 +971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1b87240384760f42a1b53e651b0a988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!114 &114537634032552832
 MonoBehaviour:
   m_ObjectHideFlags: 1

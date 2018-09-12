@@ -39,7 +39,7 @@ public class GameManager : Photon.PunBehaviour
             ((string)PhotonNetwork.player.CustomProperties["team"] == "blue")? blueSpawn.transform.position : redSpawn.transform.position,
             Quaternion.identity,
             0);
-        mainCamera.GetComponent<CameraFollow>().target = localPlayer.transform;
+        mainCamera.GetComponent<CameraFollow>().SetTarget(localPlayer.transform);
         if (PhotonNetwork.isMasterClient)
         {
             StartCoroutine(DelayedStart());

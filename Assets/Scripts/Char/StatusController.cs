@@ -101,6 +101,10 @@ public class StatusController : Photon.PunBehaviour {
         sfx.PlaySoundRPC("freeze", false);
         CleanStun();
         freeze = true;
+        if (navChar.enabled)
+        {
+            navChar.cancelarMovimiento();
+        }
         freezeEffect.SetActive(true);
         basicAttackController.CancelAttack();
         basicAttackController.enabled = false;
@@ -134,6 +138,10 @@ public class StatusController : Photon.PunBehaviour {
     {
         sfx.PlaySoundRPC("stun", true);
         syncAnimator.SetTrigger("idle");
+        if (navChar.enabled)
+        {
+            navChar.cancelarMovimiento();
+        }
         CleanFreeze();
         stun = true;
         stunEffect.SetActive(true);
