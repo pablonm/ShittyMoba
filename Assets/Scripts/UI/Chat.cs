@@ -48,7 +48,7 @@ public class Chat : Photon.PunBehaviour
 
     public IEnumerator DestroyMessage(GameObject msg)
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(30f);
         Destroy(msg);
         yield break;
     }

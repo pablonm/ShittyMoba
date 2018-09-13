@@ -783,7 +783,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: c2d622bc4892ff441aee9289a6006707, type: 3}
-    m_FontSize: 16
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1955,6 +1955,7 @@ GameObject:
   m_Component:
   - component: {fileID: 638467206}
   - component: {fileID: 638467207}
+  - component: {fileID: 638467209}
   m_Layer: 5
   m_Name: MessagesPanel
   m_TagString: Untagged
@@ -1979,7 +1980,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.24800001}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &638467207
 MonoBehaviour:
@@ -1992,6 +1993,12 @@ MonoBehaviour:
   m_Script: {fileID: -146154839, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!222 &638467209
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 638467205}
 --- !u!1 &651387921
 GameObject:
   m_ObjectHideFlags: 0
@@ -2048,7 +2055,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: c2d622bc4892ff441aee9289a6006707, type: 3}
-    m_FontSize: 16
+    m_FontSize: 14
     m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 1
@@ -5213,7 +5220,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.24800001}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2101330427
 CanvasRenderer:
