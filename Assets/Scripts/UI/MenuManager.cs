@@ -7,6 +7,7 @@ public class MenuManager : Photon.PunBehaviour
     public GameObject roomCanvas;
     public GameObject startButton;
     public GameObject charSelectionCanvas;
+    public GameObject chat;
 
     [HideInInspector]
     public GameObject mySlot;
@@ -47,6 +48,7 @@ public class MenuManager : Photon.PunBehaviour
         PhotonNetwork.player.SetCustomProperties(new ExitGames.Client.Photon.Hashtable() { { "name", playerName } });
         PhotonNetwork.player.SetCustomProperties(new ExitGames.Client.Photon.Hashtable() { { "team", "blue" } });
         PhotonNetwork.player.SetCustomProperties(new ExitGames.Client.Photon.Hashtable() { { "character", "Wizard" } });
+        chat.SetActive(true);
     }
 
     public void StartGame()
