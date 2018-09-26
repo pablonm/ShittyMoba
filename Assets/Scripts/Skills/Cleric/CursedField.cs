@@ -23,6 +23,13 @@ public class CursedField : Photon.PunBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Character") && collision.gameObject.CompareTag("Enemy") && photonView.isMine)
         {
             collision.gameObject.GetComponent<StatusController>().ApplySlow(slowMultiplier, slowSeconds);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Character") && collision.gameObject.CompareTag("Enemy") && photonView.isMine)
+        {
             collision.gameObject.GetComponent<StatusController>().ApplyPoison(poisonDamage, poisonSeconds);
         }
     }
